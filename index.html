@@ -13,7 +13,7 @@
         <h1>Posizione</h1>
     </header>
     <main>
-        <form action="https://api.whatsapp.com/send" method="get" target="_blank">
+        <form id="whatsappForm" action="https://api.whatsapp.com/send" method="get" target="_blank">
             <label for="telefono">Número de 10 dígitos:</label>
             <hr>
             <input type="text" id="phone" name="phone" required pattern="\d{10}" title="El teléfono debe contener 10 números">
@@ -24,5 +24,12 @@
     <footer>
         <p>Desarrollado por Lautaro Reche</p>
     </footer>
+
+    <script>
+        const form = document.getElementById('whatsappForm');
+        form.addEventListener('submit', () => {
+            form.phone.value = '';
+        });
+    </script>
 </body>
 </html>
