@@ -33,7 +33,7 @@ main  {
         url("/images/background.png");
     background-size: cover;
     background-position: center;
-    height: 70vh;
+    height: 75vh;
 }
 
 form {
