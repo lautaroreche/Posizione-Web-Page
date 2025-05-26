@@ -16,7 +16,7 @@
         <form id="whatsappForm" action="https://api.whatsapp.com/send" method="get" target="_blank">
             <label for="telefono">Número de 10 dígitos:</label>
             <hr>
-            <input type="text" id="phone" name="phone" required pattern="\d{10}" title="El teléfono debe contener 10 números">
+            <input type="tel" id="phone" name="phone" placeholder="0123456789" pattern="\d{10}" title="El teléfono debe contener 10 números" required>
             <input type="hidden" name="text" value="Ciao! Ti scrivo da Pizzeria Pantheon per il tuo ordine, sono il ragazzo della consegna. Potresti inviarmi la tua posizione a questo numero per favore? Perché non riesco a trovarla">
             <button type="submit">Enviar mensaje</button>
         </form>
@@ -26,9 +26,16 @@
     </footer>
 
     <script>
+        const ITALY_INTERNATIONAL_PHONE_CODE = '39';
         const form = document.getElementById('whatsappForm');
-        form.addEventListener('submit', () => {
-            form.phone.value = '';
+        form.addEventListener('submit', (e) => {
+            const phoneInput = form.phone;
+            let phoneValue = ITALY_INTERNATIONAL_PHONE_CODE + phoneInput.value.trim();
+            phoneInput.value = phoneValue;
+    
+            setTimeout(() => {
+                phoneInput.value = '';
+            }, 10);
         });
     </script>
 </body>

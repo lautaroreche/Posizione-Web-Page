@@ -60,7 +60,11 @@ hr {
 }
 
 input {
+    padding: 5px;
     outline-color: #c74f54;
+    border: 1px solid red;
+    border-radius: 5px;
+    font-size: 1.3rem;
 }
 
 button {
@@ -70,6 +74,7 @@ button {
     border: 1px solid red;
     border-radius: 7px;
     cursor: pointer;
+    width: 100%;
 }
 
 
