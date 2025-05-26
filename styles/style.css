@@ -1,0 +1,67 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+header, footer {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #c74f54;
+    color: #fff;
+}
+
+h1 {
+    margin: 0 auto;
+}
+
+main  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: 
+        linear-gradient(rgba(255, 0, 0, 0.3), rgba(255, 0, 0, 0.3)),
+        url("/images/background.png");
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 70px;
+    color: #fff;;
+    background-color: #7d7d7dE0;
+    border-radius: 7px;
+    font-size: 1.5rem;
+}
+
+label, input, button {
+    font-size: 1.5rem;
+}
+
+hr {
+    width: 100%;
+    height: 2px;
+    background-color: #c74f54;
+    border: none;
+}
+
+input {
+    outline-color: #c74f54;
+}
+
+button {
+    padding: 7px;
+    background-color: #c74f54;
+    color: #fff;
+    border: 1px solid red;
+    border-radius: 7px;
+    cursor: pointer;
+}
