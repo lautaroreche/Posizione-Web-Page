@@ -68,6 +68,10 @@ input, select {
     font-size: 1.3rem;
 }
 
+input {
+    width: 200px;
+}
+
 button {
     padding: 7px;
     background-color: #c74f54;
@@ -81,6 +85,6 @@ button {
 
 @media (max-width: 768px) {
     form {
-        padding: 30px;
+        padding: 15px;
     }
 }
