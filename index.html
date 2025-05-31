@@ -14,9 +14,16 @@
     </header>
     <main>
         <form id="whatsappForm" action="https://api.whatsapp.com/send" method="get" target="_blank">
-            <label for="telefono">Número de 10 dígitos:</label>
+            <label for="telefono">Número de teléfono:</label>
             <hr>
-            <input type="tel" id="phone" name="phone" placeholder="0123456789" pattern="\d{10}" title="El teléfono debe contener 10 números" required>
+            <div>
+                <select id="optionAreaCode" name="optionAreaCode">
+                    <option value="39">🇮🇹 (+39)</option>
+                    <option value="549">🇦🇷 (+549)</option>
+                    <option value="34">🇪🇸 (+34)</option>
+                </select>
+                <input type="tel" id="phone" name="phone" placeholder="0123456789" pattern="\d{9,10}" title="El teléfono debe contener 9 números para España y 10 números para Argentina e Italia" required>
+            </div>
             <input type="hidden" name="text" value="Ciao! Ti scrivo da Pizzeria Pantheon per il tuo ordine, sono il ragazzo della consegna. Potresti inviarmi la tua posizione a questo numero per favore? Perché non riesco a trovarla">
             <button type="submit">Enviar mensaje</button>
         </form>
@@ -30,7 +37,7 @@
         const form = document.getElementById('whatsappForm');
         form.addEventListener('submit', (e) => {
             const phoneInput = form.phone;
-            let phoneValue = ITALY_INTERNATIONAL_PHONE_CODE + phoneInput.value.trim();
+            let phoneValue = form.optionAreaCode.value + phoneInput.value.trim();
             phoneInput.value = phoneValue;
     
             setTimeout(() => {

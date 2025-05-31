@@ -48,7 +48,7 @@ form {
     font-size: 1.5rem;
 }
 
-label, input, button {
+label, input, button, select {
     font-size: 1.5rem;
 }
 
@@ -59,8 +59,9 @@ hr {
     border: none;
 }
 
-input {
+input, select {
     padding: 5px;
+    height: 40px;
     outline-color: #c74f54;
     border: 1px solid red;
     border-radius: 5px;
