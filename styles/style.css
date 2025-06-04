@@ -59,7 +59,7 @@ hr {
     border: none;
 }
 
-input, select {
+input, select, textarea {
     padding: 5px;
     height: 40px;
     outline-color: #c74f54;
@@ -68,7 +68,16 @@ input, select {
     font-size: 1.3rem;
 }
 
-input {
+textarea {
+    padding: 5px;
+    width: 100%;
+    height: 180px;
+    overflow: visible;
+    resize: none;
+    white-space: wrap;
+}
+
+#phone {
     width: 200px;
 }
 

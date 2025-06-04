@@ -24,7 +24,9 @@
                 </select>
                 <input type="tel" id="phone" name="phone" placeholder="0123456789" pattern="\d{9,10}" title="El teléfono debe contener 9 números para España y 10 números para Argentina e Italia" required>
             </div>
-            <input type="hidden" name="text" value="Ciao! Ti scrivo da Pizzeria Pantheon per il tuo ordine, sono il ragazzo della consegna. Potresti inviarmi la tua posizione a questo numero per favore? Perché non riesco a trovarla">
+            <label for="mensaje">Mensaje:</label>
+            <hr>
+            <textarea id="text" name="text">Ciao! Ti scrivo da Pizzeria Pantheon per il tuo ordine, sono il ragazzo della consegna. Potresti inviarmi la tua posizione a questo numero per favore? Perché non riesco a trovarla</textarea>
             <button type="submit">Enviar mensaje</button>
         </form>
     </main>
@@ -35,13 +37,17 @@
     <script>
         const ITALY_INTERNATIONAL_PHONE_CODE = '39';
         const form = document.getElementById('whatsappForm');
+        const text = form.elements["text"];
+        const originalText = text.defaultValue;
+
         form.addEventListener('submit', (e) => {
             const phoneInput = form.phone;
             let phoneValue = form.optionAreaCode.value + phoneInput.value.trim();
             phoneInput.value = phoneValue;
-    
+
             setTimeout(() => {
                 phoneInput.value = '';
+                text.value = originalText;
             }, 10);
         });
     </script>
