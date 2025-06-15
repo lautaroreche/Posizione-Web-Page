@@ -14,24 +14,25 @@
     </header>
     <main>
         <form id="whatsappForm" action="https://api.whatsapp.com/send" method="get" target="_blank">
-            <label for="telefono">Número de teléfono:</label>
+            <label for="telefono">Phone number:</label>
             <hr>
             <div>
                 <select id="optionAreaCode" name="optionAreaCode">
                     <option value="39">🇮🇹 (+39)</option>
                     <option value="549">🇦🇷 (+549)</option>
+                    <option value="353">🇮🇪 (+353)</option>
                     <option value="34">🇪🇸 (+34)</option>
                 </select>
-                <input type="tel" id="phone" name="phone" placeholder="0123456789" pattern="\d{9,10}" title="El teléfono debe contener 9 números para España y 10 números para Argentina e Italia" required>
+                <input type="tel" id="phone" name="phone" placeholder="0123456789" pattern="\d{9,10}" title="Phone number must contain 9 or 10 digits depending on the selected country" required>
             </div>
-            <label for="mensaje">Mensaje:</label>
+            <label for="mensaje">Message:</label>
             <hr>
-            <textarea id="text" name="text">Ciao! Ti scrivo da Pizzeria Pantheon per il tuo ordine, sono il ragazzo della consegna. Potresti inviarmi la tua posizione a questo numero per favore? Perché non riesco a trovarla</textarea>
-            <button type="submit">Enviar mensaje</button>
+            <textarea id="text" name="text"></textarea>
+            <button type="submit">Send message</button>
         </form>
     </main>
     <footer>
-        <p>Desarrollado por Lautaro Reche</p>
+        <p>Developed by Lautaro Reche</p>
     </footer>
 
     <script>
