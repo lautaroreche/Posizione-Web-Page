@@ -1,3 +1,8 @@
+:root {
+    --main-color: #c74f54;
+    --strong-red-color: #e3262c;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -16,7 +21,7 @@ header, footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #c74f54;
+    background-color: var(--main-color);
     color: #fff;
     border: 1px solid #0a0a0a
 }
@@ -56,15 +61,15 @@ label, input, button, select {
 hr {
     width: 100%;
     height: 2px;
-    background-color: #c74f54;
+    background-color: var(--main-color);
     border: none;
 }
 
 input, select, textarea {
     padding: 5px;
     height: 40px;
-    outline-color: #c74f54;
-    border: 1px solid red;
+    outline-color: var(--main-color);
+    border: 1px solid var(--strong-red-color);
     border-radius: 5px;
     font-size: 1.3rem;
 }
@@ -84,14 +89,17 @@ textarea {
 
 button {
     padding: 7px;
-    background-color: #c74f54;
+    background-color: var(--main-color);
     color: #fff;
-    border: 1px solid red;
+    border: 1px solid var(--strong-red-color);
     border-radius: 7px;
     cursor: pointer;
     width: 100%;
 }
 
+button:hover {
+    background-color: var(--strong-red-color);
+}
 
 @media (max-width: 768px) {
     form {
